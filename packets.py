@@ -5,12 +5,16 @@ REQUEST_START_GAME = "\x03\x01\x01\x01"
 CONFIRM_START_GAME = "\x03\x01\x01\x02"
 STOP_GAME = "\x03\x01\x01\x03"
 
-READY_P2 = "\x03\x01\x02\x01"
-READY_P1_START_P1 = "\x03\x01\x02\x02"
-READY_P1_START_P2 = "\x03\x01\x02\x03"
+READY_CLIENT_PLAYER = "\x03\x01\x02\x01"
+READY_SERVER_PLAYER_HEADER = "\x03\x01\x02"
 
 ATTACK_HEADER = "\x04\x01\x03"
 RESPONSE_HEADER = "\x03\x01\x04"
+
+
+class StartingPlayer(Enum):
+    SERVER_PLAYER = "\x02"
+    CLIENT_PLAYER = "\x03"
 
 
 class Result(Enum):
